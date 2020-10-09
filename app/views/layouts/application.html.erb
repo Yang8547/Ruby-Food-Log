@@ -12,12 +12,15 @@
   </head>
 
   <body>
+    <%# Add Header %>
+    <%= render 'shared/header'%>
+
     <%# notice is kind of global thing, it is better to place here %>
     <% if notice.present? %>
       <div class="notification is-line is-light"><%= notice %></div>
     <% end %>
-    <% if alter.present? %>
-      <div class="notification is-danger is-light"><%= alter %></div>
+    <% if alert.present? %>
+      <div class="notification is-danger is-light"><%= alert %></div>
     <% end %>
 
     <div class="container">
