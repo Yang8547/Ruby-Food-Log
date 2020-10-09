@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   resources :entries
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # root will goto the entries controller and find the index action and root to that
+  root to: "entries#index"
 end
