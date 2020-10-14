@@ -2,11 +2,20 @@
   Add New Log
 <%end%>
 
-<%# partial: This How other partial get inject to othet page %>
-<%# use function render %>
-<%# inject form partial into this page, the the form file shoud write like "_form.html.erb" to tell it
-is a partial %>
-<%# seconde param is passing entry to the form partial  %>
-<%= render 'form', entry: @entry %>
+<div class="columns is-centered mt-6">
+    <div class="column is-one-third">
+        <h1 class="is-size-2 has-text-weight-bold mb-3">New Entry</h1>
 
-<%= link_to 'Back', entries_path %>
+        <%# partial: This How other partial get inject to othet page %>
+        <%# use function render %>
+        <%# inject form partial into this page, the the form file shoud write like "_form.html.erb" to tell it
+        is a partial %>
+        <%# seconde param is passing entry to the form partial  %>
+        <%= render 'form', entry: @entry %>
+        
+    </div>
+</div>
+
+
+
+<%# <%= link_to 'Back', entries_path %> %>
