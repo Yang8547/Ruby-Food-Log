@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  # call back function call set_entry only in [:show,...] funtion
+  before_action :set_entry, only: %i[show edit update destroy]
 
   # GET /entries
   # GET /entries.json
@@ -9,8 +10,7 @@ class EntriesController < ApplicationController
 
   # GET /entries/1
   # GET /entries/1.json
-  def show
-  end
+  def show; end
 
   # GET /entries/new
   def new
@@ -18,8 +18,7 @@ class EntriesController < ApplicationController
   end
 
   # GET /entries/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /entries
   # POST /entries.json
@@ -62,13 +61,14 @@ class EntriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_entry
-      @entry = Entry.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def entry_params
-      params.require(:entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_entry
+    @entry = Entry.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def entry_params
+    params.require(:entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats)
+  end
 end
