@@ -12,3 +12,5 @@ This is a simple Ruby on rails project for practice
   (covers different ways to **retrieve data** from the database using Active Record)
 
 - [Rails default validator helper](https://guides.rubyonrails.org/active_record_validations.html#validation-helpers)
+
+- [Active Record Association](https://guides.rubyonrails.org/association_basics.html)(Relations)
